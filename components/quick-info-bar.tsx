@@ -20,7 +20,7 @@ export function QuickInfoBar() {
     },
     {
       icon: Phone,
-      title: "+212 612 345 678",
+      title: "+212 664 342 254",
       description: "info@gorentcarmarrakech.com",
     },
   ]

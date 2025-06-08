@@ -334,4 +334,19 @@ export const es = {
     },
     copyright: "Todos los derechos reservados.",
   },
+  fleetPage: {
+    filters: {
+      bodyTypes: {
+        crossover: "Crossover",
+        familyMpv: "Monovolumen", // Ensure this key is familyMpv
+        pickup: "Pickup",
+        sedan: "Sedán",
+        sportsCoupe: "Coupé Deportivo", // Ensure this key is sportsCoupe
+        compact: "Compacto",
+        luxury: "Lujo",
+        economy: "Económico",
+        suv: "SUV",
+      },
+    },
+  },
 }

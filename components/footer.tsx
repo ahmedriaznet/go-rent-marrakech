@@ -104,7 +104,7 @@ export function Footer() {
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                  <a href="tel:+212612345678">
+                  <a href="tel:+212664342254">
                     <Button className="bg-white text-secondary hover:bg-white/90 font-bold px-6 py-6 rounded-xl shadow-lg">
                       <Phone className="mr-2 h-5 w-5" />
                       {t("footer.cta.callUs")}
@@ -318,7 +318,7 @@ export function Footer() {
                 </li>
                 <li className="flex items-center">
                   <Phone className="w-5 h-5 mr-3 text-primary flex-shrink-0" />
-                  <span className="text-gray-300">{t("footer.contactInfo.phone")}</span>
+                  <span className="text-gray-300">+212 664 342 254</span>
                 </li>
                 <li className="flex items-center">
                   <Mail className="w-5 h-5 mr-3 text-primary flex-shrink-0" />

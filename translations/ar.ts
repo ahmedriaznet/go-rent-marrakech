@@ -324,4 +324,19 @@ export const ar = {
     },
     copyright: "جميع الحقوق محفوظة.",
   },
+  fleetPage: {
+    filters: {
+      bodyTypes: {
+        crossover: "كروس أوفر",
+        familyMpv: "ميني فان عائلي",
+        pickup: "بيك أب",
+        sedan: "سيدان",
+        sportsCoupe: "كوبيه رياضية",
+        compact: "مدمجة",
+        luxury: "فاخرة",
+        economy: "اقتصادية",
+        suv: "دفع رباعي",
+      },
+    },
+  },
 }

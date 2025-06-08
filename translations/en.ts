@@ -85,10 +85,10 @@ export const en = {
       bodyType: "Body Type",
       bodyTypes: {
         crossover: "Crossover",
-        "family-mpv": "Family MPV",
+        familyMpv: "Family MPV", // Changed from "family-mpv"
         pickup: "Pickup",
         sedan: "Sedan",
-        "sports-coupe": "Sports Coupe",
+        sportsCoupe: "Sports Coupe", // Changed from "sports-coupe"
         compact: "Compact",
         luxury: "Luxury",
         economy: "Economy",

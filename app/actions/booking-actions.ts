@@ -23,42 +23,42 @@ interface BookingDetails {
 
 function createAdminBookingNotificationHtml(details: BookingDetails): string {
   return `
-    <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
-      <div style="max-width: 600px; margin: 20px auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px; background-color: #f9f9f9;">
-        <h1 style="font-size: 24px; color: #FE9305; text-align: center; margin-bottom: 20px;">New Car Booking Notification</h1>
-        <h2 style="font-size: 20px; color: #333; border-bottom: 2px solid #FE9305; padding-bottom: 10px; margin-bottom: 20px;">Booking Details</h2>
-        <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
-          <tr>
-            <td style="padding: 10px; border: 1px solid #eee; font-weight: bold; background-color: #f0f0f0;">Full Name:</td>
-            <td style="padding: 10px; border: 1px solid #eee;">${details.fullName}</td>
-          </tr>
-          <tr>
-            <td style="padding: 10px; border: 1px solid #eee; font-weight: bold; background-color: #f0f0f0;">Email:</td>
-            <td style="padding: 10px; border: 1px solid #eee;">${details.email}</td>
-          </tr>
-          <tr>
-            <td style="padding: 10px; border: 1px solid #eee; font-weight: bold; background-color: #f0f0f0;">Phone:</td>
-            <td style="padding: 10px; border: 1px solid #eee;">${details.phone}</td>
-          </tr>
-          <tr>
-            <td style="padding: 10px; border: 1px solid #eee; font-weight: bold; background-color: #f0f0f0;">Selected Car:</td>
-            <td style="padding: 10px; border: 1px solid #eee;">${details.selectedCar}</td>
-          </tr>
-          <tr>
-            <td style="padding: 10px; border: 1px solid #eee; font-weight: bold; background-color: #f0f0f0;">Arrival Date:</td>
-            <td style="padding: 10px; border: 1px solid #eee;">${details.arrivalDate}</td>
-          </tr>
-          <tr>
-            <td style="padding: 10px; border: 1px solid #eee; font-weight: bold; background-color: #f0f0f0;">Departure Date:</td>
-            <td style="padding: 10px; border: 1px solid #eee;">${details.departureDate}</td>
-          </tr>
-        </table>
-        <p style="font-size: 14px; color: #555; text-align: center;">
-          This email was sent automatically from the Go Car Rent Marrakech booking system.
-        </p>
-      </div>
+  <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+    <div style="max-width: 600px; margin: 20px auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px; background-color: #f9f9f9;">
+      <h1 style="font-size: 24px; color: #FE9305; text-align: center; margin-bottom: 20px;">New Car Booking Notification</h1>
+      <h2 style="font-size: 20px; color: #333; border-bottom: 2px solid #FE9305; padding-bottom: 10px; margin-bottom: 20px;">Booking Details</h2>
+      <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+        <tr>
+          <td style="padding: 10px; border: 1px solid #eee; font-weight: bold; background-color: #f0f0f0;">Full Name:</td>
+          <td style="padding: 10px; border: 1px solid #eee;">${details.fullName}</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #eee; font-weight: bold; background-color: #f0f0f0;">Email:</td>
+          <td style="padding: 10px; border: 1px solid #eee;">${details.email}</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #eee; font-weight: bold; background-color: #f0f0f0;">Phone:</td>
+          <td style="padding: 10px; border: 1px solid #eee;">${details.phone}</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #eee; font-weight: bold; background-color: #f0f0f0;">Selected Car:</td>
+          <td style="padding: 10px; border: 1px solid #eee;">${details.selectedCar}</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #eee; font-weight: bold; background-color: #f0f0f0;">Arrival Date:</td>
+          <td style="padding: 10px; border: 1px solid #eee;">${details.arrivalDate}</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #eee; font-weight: bold; background-color: #f0f0f0;">Departure Date:</td>
+          <td style="padding: 10px; border: 1px solid #eee;">${details.departureDate}</td>
+        </tr>
+      </table>
+      <p style="font-size: 14px; color: #555; text-align: center;">
+        This email was sent automatically from the Go Car Rent Marrakech booking system.
+      </p>
     </div>
-  `
+  </div>
+`
 }
 
 function createCustomerBookingConfirmationHtml(details: BookingDetails): string {
@@ -66,49 +66,49 @@ function createCustomerBookingConfirmationHtml(details: BookingDetails): string 
   const logoUrl = `${siteUrl}/go-rent-logo.png`
 
   return `
-    <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
-      <div style="max-width: 600px; margin: 20px auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px;">
-        <div style="text-align: center; margin-bottom: 20px;">
-          <img src="${logoUrl}" alt="Go Car Rent Marrakech Logo" width="150" style="max-width: 150px; height: auto;" />
-          <h1 style="font-size: 24px; color: #FE9305; margin-top: 10px;">Thank You for Your Booking, ${details.fullName}!</h1>
-        </div>
-        <p style="font-size: 16px; margin-bottom: 20px;">
-          Thank you for submitting your car rental request with Go Car Rent Marrakech! We’ve received your details and will be in touch with you shortly.
-        </p>
-        <h2 style="font-size: 20px; color: #333; border-bottom: 2px solid #FE9305; padding-bottom: 10px; margin-bottom: 20px;">Your Booking Summary</h2>
-        <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
-          <tr>
-            <td style="padding: 10px; border: 1px solid #eee; font-weight: bold; background-color: #f9f9f9;">Selected Car:</td>
-            <td style="padding: 10px; border: 1px solid #eee;">${details.selectedCar}</td>
-          </tr>
-          <tr>
-            <td style="padding: 10px; border: 1px solid #eee; font-weight: bold; background-color: #f9f9f9;">Arrival Date:</td>
-            <td style="padding: 10px; border: 1px solid #eee;">${details.arrivalDate}</td>
-          </tr>
-          <tr>
-            <td style="padding: 10px; border: 1px solid #eee; font-weight: bold; background-color: #f9f9f9;">Departure Date:</td>
-            <td style="padding: 10px; border: 1px solid #eee;">${details.departureDate}</td>
-          </tr>
-        </table>
-        <h3 style="font-size: 18px; color: #333; margin-top: 30px; margin-bottom: 10px;">What's Next?</h3>
-        <ul style="list-style-type: disc; padding-left: 20px; margin-bottom: 20px;">
-          <li>Please keep this email for your records.</li>
-          <li>We will contact you if we have any questions regarding your booking.</li>
-          <li>Prepare for an amazing trip in Marrakech!</li>
-        </ul>
-        <p style="font-size: 16px; margin-bottom: 20px;">
-          If you have any questions or need to make changes to your booking, please don't hesitate to contact us at:
-        </p>
-        <p style="font-size: 16px; margin-bottom: 5px;"><strong>Email:</strong> <a href="mailto:contact@gocarrentmarrakech.com" style="color: #FE9305; text-decoration: none;">contact@gocarrentmarrakech.com</a></p>
-        <p style="font-size: 16px; margin-bottom: 20px;"><strong>Phone:</strong> +212 612 345 678 </p>
-        <hr style="border: none; border-top: 1px solid #eee; margin: 30px 0;" />
-        <p style="font-size: 14px; color: #777; text-align: center;">
-          Thank you for choosing Go Car Rent Marrakech!<br />
-          <a href="${siteUrl}" style="color: #FE9305; text-decoration: none;">Visit our website</a>
-        </p>
+  <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+    <div style="max-width: 600px; margin: 20px auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px;">
+      <div style="text-align: center; margin-bottom: 20px;">
+        <img src="${logoUrl}" alt="Go Car Rent Marrakech Logo" width="150" style="max-width: 150px; height: auto;" />
+        <h1 style="font-size: 24px; color: #FE9305; margin-top: 10px;">Thank You for Your Booking, ${details.fullName}!</h1>
       </div>
+      <p style="font-size: 16px; margin-bottom: 20px;">
+        Thank you for submitting your car rental request with Go Car Rent Marrakech! We’ve received your details and will be in touch with you shortly.
+      </p>
+      <h2 style="font-size: 20px; color: #333; border-bottom: 2px solid #FE9305; padding-bottom: 10px; margin-bottom: 20px;">Your Booking Summary</h2>
+      <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+        <tr>
+          <td style="padding: 10px; border: 1px solid #eee; font-weight: bold; background-color: #f9f9f9;">Selected Car:</td>
+          <td style="padding: 10px; border: 1px solid #eee;">${details.selectedCar}</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #eee; font-weight: bold; background-color: #f9f9f9;">Arrival Date:</td>
+          <td style="padding: 10px; border: 1px solid #eee;">${details.arrivalDate}</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #eee; font-weight: bold; background-color: #f9f9f9;">Departure Date:</td>
+          <td style="padding: 10px; border: 1px solid #eee;">${details.departureDate}</td>
+        </tr>
+      </table>
+      <h3 style="font-size: 18px; color: #333; margin-top: 30px; margin-bottom: 10px;">What's Next?</h3>
+      <ul style="list-style-type: disc; padding-left: 20px; margin-bottom: 20px;">
+        <li>Please keep this email for your records.</li>
+        <li>We will contact you if we have any questions regarding your booking.</li>
+        <li>Prepare for an amazing trip in Marrakech!</li>
+      </ul>
+      <p style="font-size: 16px; margin-bottom: 20px;">
+        If you have any questions or need to make changes to your booking, please don't hesitate to contact us at:
+      </p>
+      <p style="font-size: 16px; margin-bottom: 5px;"><strong>Email:</strong> <a href="mailto:contact@gocarrentmarrakech.com" style="color: #FE9305; text-decoration: none;">contact@gocarrentmarrakech.com</a></p>
+      <p style="font-size: 16px; margin-bottom: 20px;"><strong>Phone:</strong> +212 664 342 254 </p>
+      <hr style="border: none; border-top: 1px solid #eee; margin: 30px 0;" />
+      <p style="font-size: 14px; color: #777; text-align: center;">
+        Thank you for choosing Go Car Rent Marrakech!<br />
+        <a href="${siteUrl}" style="color: #FE9305; text-decoration: none;">Visit our website</a>
+      </p>
     </div>
-  `
+  </div>
+`
 }
 
 // --- !!! HARDCODED CREDENTIALS - FOR TESTING ONLY !!! ---

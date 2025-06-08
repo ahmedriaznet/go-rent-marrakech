@@ -107,7 +107,7 @@ export default function ContactPage() {
     {
       icon: Phone,
       title: t("contactPage.contactInfo.phone.title"),
-      details: ["+212 612 345 678", "+212 524 123 456"],
+      details: ["+212 664 342 254", "+212 524 123 456"],
       color: "bg-secondary",
     },
     {
@@ -332,13 +332,13 @@ export default function ContactPage() {
                       <h4 className="text-xl font-bold mb-2">{t("contactPage.form.success.title")}</h4>
                       <p className="mb-4">{state.message}</p>
                       {/* The form will be reset by useEffect, so a "send another" button might not be needed,
-                          or you'd need a separate state to toggle back to the form view if you want to keep this exact UI.
-                          For simplicity with useActionState, the form usually just shows and resets.
-                          If you want to keep the "Send Another Message" button, you'd need to manually reset the `state` from useActionState,
-                          e.g., by calling a dummy action or managing an additional local state variable.
-                          Let's remove the button for now to simplify, as the form fields will clear.
-                          If the user wants to send another, they just fill the (now empty) form again.
-                      */}
+                        or you'd need a separate state to toggle back to the form view if you want to keep this exact UI.
+                        For simplicity with useActionState, the form usually just shows and resets.
+                        If you want to keep the "Send Another Message" button, you'd need to manually reset the `state` from useActionState,
+                        e.g., by calling a dummy action or managing an additional local state variable.
+                        Let's remove the button for now to simplify, as the form fields will clear.
+                        If the user wants to send another, they just fill the (now empty) form again.
+                    */}
                     </motion.div>
                   ) : (
                     <form action={formAction} className="space-y-6">
@@ -543,7 +543,7 @@ export default function ContactPage() {
                 description: t("contactPage.quickContact.options.call.description"),
                 action: t("contactPage.quickContact.options.call.action"),
                 color: "bg-primary",
-                href: "tel:+212612345678",
+                href: "tel:+212664342254",
                 type: "tel",
               },
               {

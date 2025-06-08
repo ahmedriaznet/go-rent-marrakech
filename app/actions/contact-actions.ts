@@ -22,29 +22,29 @@ export type ContactFormState = {
 // --- Email Templates ---
 function createAdminContactNotificationHtml(details: ContactDetails): string {
   return `
-    <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
-      <div style="max-width: 600px; margin: 20px auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px; background-color: #f9f9f9;">
-        <h1 style="font-size: 24px; color: #117485; text-align: center; margin-bottom: 20px;">New Contact Form Submission</h1>
-        
-        <h2 style="font-size: 20px; color: #333; border-bottom: 2px solid #117485; padding-bottom: 10px; margin-bottom: 20px;">Sender Details</h2>
-        <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
-          <tr><td style="padding: 10px; border: 1px solid #eee; font-weight: bold; background-color: #f0f0f0;">Name:</td><td style="padding: 10px; border: 1px solid #eee;">${details.name}</td></tr>
-          <tr><td style="padding: 10px; border: 1px solid #eee; font-weight: bold; background-color: #f0f0f0;">Email:</td><td style="padding: 10px; border: 1px solid #eee;">${details.email}</td></tr>
-          ${details.phone ? `<tr><td style="padding: 10px; border: 1px solid #eee; font-weight: bold; background-color: #f0f0f0;">Phone:</td><td style="padding: 10px; border: 1px solid #eee;">${details.phone}</td></tr>` : ""}
-          <tr><td style="padding: 10px; border: 1px solid #eee; font-weight: bold; background-color: #f0f0f0;">Subject:</td><td style="padding: 10px; border: 1px solid #eee;">${details.subject}</td></tr>
-        </table>
+  <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+    <div style="max-width: 600px; margin: 20px auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px; background-color: #f9f9f9;">
+      <h1 style="font-size: 24px; color: #117485; text-align: center; margin-bottom: 20px;">New Contact Form Submission</h1>
+      
+      <h2 style="font-size: 20px; color: #333; border-bottom: 2px solid #117485; padding-bottom: 10px; margin-bottom: 20px;">Sender Details</h2>
+      <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+        <tr><td style="padding: 10px; border: 1px solid #eee; font-weight: bold; background-color: #f0f0f0;">Name:</td><td style="padding: 10px; border: 1px solid #eee;">${details.name}</td></tr>
+        <tr><td style="padding: 10px; border: 1px solid #eee; font-weight: bold; background-color: #f0f0f0;">Email:</td><td style="padding: 10px; border: 1px solid #eee;">${details.email}</td></tr>
+        ${details.phone ? `<tr><td style="padding: 10px; border: 1px solid #eee; font-weight: bold; background-color: #f0f0f0;">Phone:</td><td style="padding: 10px; border: 1px solid #eee;">${details.phone}</td></tr>` : ""}
+        <tr><td style="padding: 10px; border: 1px solid #eee; font-weight: bold; background-color: #f0f0f0;">Subject:</td><td style="padding: 10px; border: 1px solid #eee;">${details.subject}</td></tr>
+      </table>
 
-        <h2 style="font-size: 20px; color: #333; border-bottom: 2px solid #117485; padding-bottom: 10px; margin-bottom: 20px;">Message</h2>
-        <div style="padding: 10px; border: 1px solid #eee; background-color: #fff; border-radius: 4px;">
-          <p style="white-space: pre-wrap;">${details.message}</p>
-        </div>
-        
-        <p style="font-size: 14px; color: #555; text-align: center; margin-top: 20px;">
-          This email was sent from the contact form on Go Car Rent Marrakech.
-        </p>
+      <h2 style="font-size: 20px; color: #333; border-bottom: 2px solid #117485; padding-bottom: 10px; margin-bottom: 20px;">Message</h2>
+      <div style="padding: 10px; border: 1px solid #eee; background-color: #fff; border-radius: 4px;">
+        <p style="white-space: pre-wrap;">${details.message}</p>
       </div>
+      
+      <p style="font-size: 14px; color: #555; text-align: center; margin-top: 20px;">
+        This email was sent from the contact form on Go Car Rent Marrakech.
+      </p>
     </div>
-  `
+  </div>
+`
 }
 
 function createCustomerContactConfirmationHtml(details: ContactDetails): string {
@@ -52,36 +52,36 @@ function createCustomerContactConfirmationHtml(details: ContactDetails): string 
   const logoUrl = `${siteUrl}/go-rent-logo.png`
 
   return `
-    <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
-      <div style="max-width: 600px; margin: 20px auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px;">
-        <div style="text-align: center; margin-bottom: 20px;">
-          <img src="${logoUrl}" alt="Go Car Rent Marrakech Logo" width="150" style="max-width: 150px; height: auto;">
-          <h1 style="font-size: 24px; color: #FE9305; margin-top: 10px;">Thank You For Reaching Out, ${details.name}!</h1>
-        </div>
-        
-        <p style="font-size: 16px; margin-bottom: 20px;">
-          We have received your message and appreciate you contacting Go Car Rent Marrakech. Our team will review your inquiry and get back to you as soon as possible.
-        </p>
-        
-        <h2 style="font-size: 20px; color: #333; border-bottom: 2px solid #FE9305; padding-bottom: 10px; margin-bottom: 20px;">Your Message Summary</h2>
-        <p style="font-size: 16px; margin-bottom: 5px;"><strong>Subject:</strong> ${details.subject}</p>
-        <p style="font-size: 16px; margin-bottom: 20px; padding: 10px; border: 1px solid #eee; background-color: #f9f9f9; border-radius: 4px; white-space: pre-wrap;">${details.message.substring(0, 200)}${details.message.length > 200 ? "..." : ""}</p>
-        
-        <p style="font-size: 16px; margin-bottom: 20px;">
-          If your matter is urgent, or if you prefer to speak with us directly, please call us at:
-        </p>
-        <p style="font-size: 16px; margin-bottom: 20px;"><strong>Phone:</strong> +212 612 345 678 (Your actual phone number)</p>
-        
-        <hr style="border: none; border-top: 1px solid #eee; margin: 30px 0;">
-        
-        <p style="font-size: 14px; color: #777; text-align: center;">
-          Thank you for choosing Go Car Rent Marrakech!
-          <br>
-          <a href="${siteUrl}" style="color: #FE9305; text-decoration: none;">Visit our website</a>
-        </p>
+  <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+    <div style="max-width: 600px; margin: 20px auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px;">
+      <div style="text-align: center; margin-bottom: 20px;">
+        <img src="${logoUrl}" alt="Go Car Rent Marrakech Logo" width="150" style="max-width: 150px; height: auto;">
+        <h1 style="font-size: 24px; color: #FE9305; margin-top: 10px;">Thank You For Reaching Out, ${details.name}!</h1>
       </div>
+      
+      <p style="font-size: 16px; margin-bottom: 20px;">
+        We have received your message and appreciate you contacting Go Car Rent Marrakech. Our team will review your inquiry and get back to you as soon as possible.
+      </p>
+      
+      <h2 style="font-size: 20px; color: #333; border-bottom: 2px solid #FE9305; padding-bottom: 10px; margin-bottom: 20px;">Your Message Summary</h2>
+      <p style="font-size: 16px; margin-bottom: 5px;"><strong>Subject:</strong> ${details.subject}</p>
+      <p style="font-size: 16px; margin-bottom: 20px; padding: 10px; border: 1px solid #eee; background-color: #f9f9f9; border-radius: 4px; white-space: pre-wrap;">${details.message.substring(0, 200)}${details.message.length > 200 ? "..." : ""}</p>
+      
+      <p style="font-size: 16px; margin-bottom: 20px;">
+        If your matter is urgent, or if you prefer to speak with us directly, please call us at:
+      </p>
+      <p style="font-size: 16px; margin-bottom: 20px;"><strong>Phone:</strong> +212 664 342 254</p>
+      
+      <hr style="border: none; border-top: 1px solid #eee; margin: 30px 0;">
+      
+      <p style="font-size: 14px; color: #777; text-align: center;">
+        Thank you for choosing Go Car Rent Marrakech!
+        <br>
+        <a href="${siteUrl}" style="color: #FE9305; text-decoration: none;">Visit our website</a>
+      </p>
     </div>
-  `
+  </div>
+`
 }
 
 // --- Nodemailer Setup ---
