@@ -1,0 +1,226 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+    --primary: 33 99% 51%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 189 76% 30%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 33 99% 51%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 33 99% 51%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 189 76% 10%;
+    --foreground: 0 0% 100%;
+    --card: 189 76% 15%;
+    --card-foreground: 0 0% 100%;
+    --popover: 189 76% 15%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 33 99% 51%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 189 76% 30%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 189 76% 20%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 33 99% 51%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 189 76% 20%;
+    --input: 189 76% 20%;
+    --ring: 33 99% 51%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Remove smooth scroll behavior that might be causing issues */
+/* html {
+  scroll-behavior: smooth;
+} */
+
+/* Smooth section transitions */
+section {
+  position: relative;
+  z-index: 1;
+}
+
+/* Prevent white flash during page transitions */
+body {
+  background-color: #fafafa;
+}
+
+/* Wave transition styles */
+.wave-divider {
+  display: block;
+  width: 100%;
+  height: auto;
+  transform: translateY(1px); /* Prevent tiny gaps */
+}
+
+/* Add this to the end of your globals.css file */
+@layer utilities {
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Add this to the end of the file, after the custom-scrollbar utilities */
+
+/* Fix for language dropdown appearing behind the Book Now button */
+.fixed.top-0.left-0.right-0.z-40 .relative.group {
+  z-index: 100;
+}
+
+/* Ensure the Book Now button doesn't get hidden */
+.bg-primary.hover\:bg-primary\/90 {
+  position: relative;
+  z-index: 50;
+}
+
+/* Fix for language dropdown z-index - apply the user's working solution */
+.py-4 {
+  z-index: 2;
+}
+
+/* Blog content styling for proper HTML rendering */
+.blog-content h1 {
+  font-size: 2.5rem !important;
+  font-weight: 700 !important;
+  color: #1f2937 !important;
+  margin-top: 3rem !important;
+  margin-bottom: 1.5rem !important;
+  line-height: 1.2 !important;
+}
+
+.blog-content h2 {
+  font-size: 2rem !important;
+  font-weight: 700 !important;
+  color: #1f2937 !important;
+  margin-top: 3rem !important;
+  margin-bottom: 1.5rem !important;
+  line-height: 1.3 !important;
+}
+
+.blog-content h3 {
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+  color: #1f2937 !important;
+  margin-top: 2rem !important;
+  margin-bottom: 1rem !important;
+  line-height: 1.4 !important;
+}
+
+.blog-content h4 {
+  font-size: 1.25rem !important;
+  font-weight: 700 !important;
+  color: #1f2937 !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 0.75rem !important;
+  line-height: 1.4 !important;
+}
+
+.blog-content p {
+  font-size: 1.125rem !important;
+  color: #374151 !important;
+  margin-bottom: 1.5rem !important;
+  line-height: 1.7 !important;
+}
+
+.blog-content ul,
+.blog-content ol {
+  margin-bottom: 1.5rem !important;
+  padding-left: 1.5rem !important;
+  font-size: 1.125rem !important;
+  color: #374151 !important;
+}
+
+.blog-content li {
+  margin-bottom: 0.5rem !important;
+  line-height: 1.6 !important;
+}
+
+.blog-content ul {
+  list-style-type: disc !important;
+}
+
+.blog-content ol {
+  list-style-type: decimal !important;
+}
+
+.blog-content strong {
+  font-weight: 700 !important;
+  color: #1f2937 !important;
+}
+
+.blog-content a {
+  color: #ea580c !important;
+  text-decoration: none !important;
+}
+
+.blog-content a:hover {
+  text-decoration: underline !important;
+}
+
+/* Responsive adjustments for blog content */
+@media (max-width: 768px) {
+  .blog-content h1 {
+    font-size: 2rem !important;
+  }
+
+  .blog-content h2 {
+    font-size: 1.75rem !important;
+  }
+
+  .blog-content h3 {
+    font-size: 1.25rem !important;
+  }
+
+  .blog-content p,
+  .blog-content ul,
+  .blog-content ol {
+    font-size: 1rem !important;
+  }
+}
