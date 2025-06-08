@@ -16,7 +16,7 @@ export type ContactFormState = {
   message: string
   success?: boolean
   error?: boolean
-  errors?: Record<string, string[]> // For field-specific errors
+  errors?: Record<string, string[]>
 } | null
 
 // --- Email Templates ---
@@ -48,7 +48,8 @@ function createAdminContactNotificationHtml(details: ContactDetails): string {
 }
 
 function createCustomerContactConfirmationHtml(details: ContactDetails): string {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://gocarrentmarrakech.com" // Fallback for local dev if needed
+  // NEXT_PUBLIC_SITE_URL should still ideally come from env for flexibility
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://gocarrentmarrakech.com"
   const logoUrl = `${siteUrl}/go-rent-logo.png`
 
   return `
@@ -84,14 +85,20 @@ function createCustomerContactConfirmationHtml(details: ContactDetails): string 
   `
 }
 
+// --- HARDCODED CREDENTIALS & EMAILS - FOR PRODUCTION (NOT RECOMMENDED) ---
+const HARDCODED_SMTP_USER = "noreply@gorentmarrakech.com"
+const HARDCODED_SMTP_PASSWORD = "Amy6986177#@"
+const HARDCODED_ADMIN_EMAIL = "reservation@gorentmarrakech.com"
+// --- END OF HARDCODED VALUES ---
+
 // --- Nodemailer Setup ---
 const transporter = nodemailer.createTransport({
-  host: "mail.gorentmarrakech.com", // Your Outgoing Server
-  port: 465, // Your SMTP Port
-  secure: true, // true for port 465
+  host: "mail.gorentmarrakech.com",
+  port: 465,
+  secure: true,
   auth: {
-    user: process.env.CPANEL_SMTP_USER, // Will be noreply@gorentmarrakech.com
-    pass: process.env.CPANEL_SMTP_PASSWORD, // Will be the new password you set
+    user: HARDCODED_SMTP_USER,
+    pass: HARDCODED_SMTP_PASSWORD,
   },
   tls: {
     rejectUnauthorized: true,
@@ -102,32 +109,17 @@ const transporter = nodemailer.createTransport({
 const contactFormSchema = z.object({
   name: z.string().min(2, "Full name must be at least 2 characters."),
   email: z.string().email("Invalid email address."),
-  phone: z.string().optional().or(z.literal("")), // Optional, but if provided, validate
+  phone: z.string().optional().or(z.literal("")),
   subject: z.string().min(5, "Subject must be at least 5 characters."),
   message: z.string().min(10, "Message must be at least 10 characters."),
 })
 
 // --- Server Action ---
 export async function submitContactForm(prevState: ContactFormState, formData: FormData): Promise<ContactFormState> {
-  if (!process.env.CPANEL_SMTP_USER || !process.env.CPANEL_SMTP_PASSWORD) {
-    console.error("cPanel SMTP credentials are not set in environment variables.")
-    return {
-      message: "Server configuration error: Email service (cPanel SMTP) is not set up. Please contact support.",
-      error: true,
-    }
-  }
-  if (!process.env.ADMIN_EMAIL) {
-    console.error("Admin email is not set in environment variables.")
-    return {
-      message: "Server configuration error: Admin recipient is not set up. Please contact support.",
-      error: true,
-    }
-  }
-
   const rawFormData = {
     name: formData.get("name") as string,
     email: formData.get("email") as string,
-    phone: (formData.get("phone") as string) || undefined, // Ensure undefined if empty
+    phone: (formData.get("phone") as string) || undefined,
     subject: formData.get("subject") as string,
     message: formData.get("message") as string,
   }
@@ -153,17 +145,17 @@ export async function submitContactForm(prevState: ContactFormState, formData: F
   try {
     // Send Admin Notification Email
     const adminMailOptions = {
-      from: `"Go Car Rent Contact Form" <${process.env.CPANEL_SMTP_USER}>`,
-      to: process.env.ADMIN_EMAIL,
+      from: `"Go Car Rent Contact Form" <${HARDCODED_SMTP_USER}>`,
+      to: HARDCODED_ADMIN_EMAIL,
       subject: `New Contact Message: ${contactDetails.subject}`,
       html: createAdminContactNotificationHtml(contactDetails),
     }
     await transporter.sendMail(adminMailOptions)
-    console.log("Admin contact notification email sent successfully to:", process.env.ADMIN_EMAIL)
+    console.log("Admin contact notification email sent successfully to:", HARDCODED_ADMIN_EMAIL)
 
     // Send Customer Confirmation Email
     const customerMailOptions = {
-      from: `"Go Car Rent Marrakech" <${process.env.CPANEL_SMTP_USER}>`,
+      from: `"Go Car Rent Marrakech" <${HARDCODED_SMTP_USER}>`,
       to: contactDetails.email,
       subject: "We've Received Your Message - Go Car Rent Marrakech",
       html: createCustomerContactConfirmationHtml(contactDetails),
@@ -182,10 +174,7 @@ export async function submitContactForm(prevState: ContactFormState, formData: F
       // @ts-ignore
       if (error.code === "EAUTH") {
         errorMessage =
-          "Email server authentication failed. This is likely due to incorrect credentials (username or password) in your environment variables. Please double-check your CPANEL_SMTP_USER and CPANEL_SMTP_PASSWORD and ensure they are correct."
-        // @ts-ignore
-      } else if (error.code === "ECONNREFUSED") {
-        errorMessage = "Could not connect to email server. Please check server configuration or network."
+          "Email server authentication failed. This is likely due to incorrect credentials (username or password) being used."
       } else {
         errorMessage = `Failed to send email: ${error.message}. Please try again.`
       }

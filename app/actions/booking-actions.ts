@@ -62,6 +62,7 @@ function createAdminBookingNotificationHtml(details: BookingDetails): string {
 }
 
 function createCustomerBookingConfirmationHtml(details: BookingDetails): string {
+  // NEXT_PUBLIC_SITE_URL should still ideally come from env for flexibility
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://gocarrentmarrakech.com"
   const logoUrl = `${siteUrl}/go-rent-logo.png`
 
@@ -111,10 +112,11 @@ function createCustomerBookingConfirmationHtml(details: BookingDetails): string 
   `
 }
 
-// --- !!! HARDCODED CREDENTIALS - FOR TESTING ONLY !!! ---
+// --- HARDCODED CREDENTIALS & EMAILS - FOR PRODUCTION (NOT RECOMMENDED) ---
 const HARDCODED_SMTP_USER = "noreply@gorentmarrakech.com"
-const HARDCODED_SMTP_PASSWORD = "Amy6986177#@" // Your provided password
-// --- !!! END OF HARDCODED CREDENTIALS !!! ---
+const HARDCODED_SMTP_PASSWORD = "Amy6986177#@"
+const HARDCODED_ADMIN_EMAIL = "reservation@gorentmarrakech.com"
+// --- END OF HARDCODED VALUES ---
 
 // --- Nodemailer Setup ---
 const transporter = nodemailer.createTransport({
@@ -122,15 +124,12 @@ const transporter = nodemailer.createTransport({
   port: 465,
   secure: true,
   auth: {
-    user: HARDCODED_SMTP_USER, // Using hardcoded user
-    pass: HARDCODED_SMTP_PASSWORD, // Using hardcoded password
+    user: HARDCODED_SMTP_USER,
+    pass: HARDCODED_SMTP_PASSWORD,
   },
   tls: {
     rejectUnauthorized: true,
   },
-  // For more detailed logs during this test (optional):
-  // debug: true,
-  // logger: true,
 })
 
 // --- Zod Schema for Validation ---
@@ -144,30 +143,6 @@ const bookingSchema = z.object({
 })
 
 export async function submitBooking(prevState: BookingFormState, formData: FormData): Promise<BookingFormState> {
-  // Check if the hardcoded credentials are the placeholder ones - this is a safety check
-  if (
-    HARDCODED_SMTP_PASSWORD === "YOUR_CPANEL_EMAIL_PASSWORD_PLACEHOLDER" ||
-    !HARDCODED_SMTP_USER ||
-    HARDCODED_SMTP_USER === ""
-  ) {
-    console.error(
-      "CRITICAL: Placeholder hardcoded credentials are still in the code, or user is empty. This should not happen with the current setup.",
-    )
-    return {
-      message: "Server configuration error: Hardcoded credentials not set correctly. Please contact support.",
-      error: true,
-    }
-  }
-
-  const adminEmail = process.env.ADMIN_EMAIL
-  if (!adminEmail) {
-    console.error("Admin email (ADMIN_EMAIL) is not set in environment variables.")
-    return {
-      message: "Server configuration error: Admin recipient is not set up. Please contact support.",
-      error: true,
-    }
-  }
-
   const rawFormData = {
     fullName: formData.get("fullName") as string,
     email: formData.get("email") as string,
@@ -197,17 +172,19 @@ export async function submitBooking(prevState: BookingFormState, formData: FormD
   const bookingDetails: BookingDetails = validationResult.data
 
   try {
+    // Send Admin Notification Email
     const adminMailOptions = {
-      from: `"Go Car Rent Marrakech Booking" <${HARDCODED_SMTP_USER}>`, // Using hardcoded user
-      to: adminEmail,
+      from: `"Go Car Rent Marrakech Booking" <${HARDCODED_SMTP_USER}>`,
+      to: HARDCODED_ADMIN_EMAIL,
       subject: `New Car Booking: ${bookingDetails.selectedCar} for ${bookingDetails.fullName}`,
       html: createAdminBookingNotificationHtml(bookingDetails),
     }
     await transporter.sendMail(adminMailOptions)
-    console.log("Admin notification email sent successfully to:", adminEmail)
+    console.log("Admin notification email sent successfully to:", HARDCODED_ADMIN_EMAIL)
 
+    // Send Customer Confirmation Email
     const customerMailOptions = {
-      from: `"Go Car Rent Marrakech" <${HARDCODED_SMTP_USER}>`, // Using hardcoded user
+      from: `"Go Car Rent Marrakech" <${HARDCODED_SMTP_USER}>`,
       to: bookingDetails.email,
       subject: "Your Go Car Rent Marrakech Booking Confirmation",
       html: createCustomerBookingConfirmationHtml(bookingDetails),
@@ -226,10 +203,7 @@ export async function submitBooking(prevState: BookingFormState, formData: FormD
       // @ts-ignore
       if (error.code === "EAUTH") {
         errorMessage =
-          "Email server authentication failed. This is likely due to incorrect credentials (username or password) being used. If these are hardcoded, please double-check them. Otherwise, check environment variables."
-        // @ts-ignore
-      } else if (error.code === "ECONNREFUSED") {
-        errorMessage = "Could not connect to email server. Please check server configuration or network."
+          "Email server authentication failed. This is likely due to incorrect credentials (username or password) being used."
       } else {
         errorMessage = `Failed to send email: ${error.message}. Please try again.`
       }
