@@ -1,28 +1,38 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import Link from "next/link"
-import Image from "next/image"
-import { motion, AnimatePresence } from "framer-motion"
-import { Menu, X, ChevronDown, Phone, Mail, Globe, Facebook, Instagram, MessageCircle } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { cn } from "@/lib/utils"
-import { useLanguage } from "@/context/language-context"
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  Menu,
+  X,
+  ChevronDown,
+  Phone,
+  Mail,
+  Globe,
+  Facebook,
+  Instagram,
+  MessageCircle,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { useLanguage } from "@/context/language-context";
 
 export function Navbar() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
-  const { language, setLanguage, t } = useLanguage()
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const { language, setLanguage, t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)
-    }
+      setIsScrolled(window.scrollY > 20);
+    };
 
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navItems = [
     { href: "/", label: t("nav.home") },
@@ -30,12 +40,12 @@ export function Navbar() {
     { href: "/who-we-are", label: t("nav.whoWeAre") },
     { href: "/blog", label: t("nav.blog") },
     { href: "/contact", label: t("nav.contact") },
-  ]
+  ];
 
   const languages = [
     { code: "en", name: "English" },
     { code: "fr", name: "Français" },
-  ]
+  ];
 
   return (
     <>
@@ -51,16 +61,19 @@ export function Navbar() {
           >
             <div className="container mx-auto px-4 h-full flex items-center justify-between text-sm">
               <div className="flex items-center space-x-6">
-                <a href="tel:+212612345678" className="flex items-center hover:text-primary transition-colors">
+                <a
+                  href="tel:+212664342254"
+                  className="flex items-center hover:text-primary transition-colors"
+                >
                   <Phone className="w-3 h-3 mr-1" />
-                  +212 612 345 678
+                  +212 664 342 254
                 </a>
                 <a
-                  href="mailto:info@gorentcarmarrakech.com"
+                  href="mailto:Reservation@gorentmarrakech.com"
                   className="hidden md:flex items-center hover:text-primary transition-colors"
                 >
                   <Mail className="w-3 h-3 mr-1" />
-                  info@gorentcarmarrakech.com
+                  Reservation@gorentmarrakech.com
                 </a>
               </div>
               <div className="flex items-center space-x-4">
@@ -76,7 +89,9 @@ export function Navbar() {
                         key={lang.code}
                         onClick={() => setLanguage(lang.code)}
                         className={`block w-full text-left px-4 py-2 text-sm ${
-                          language === lang.code ? "bg-primary/10 text-primary" : "text-gray-700 hover:bg-gray-100"
+                          language === lang.code
+                            ? "bg-primary/10 text-primary"
+                            : "text-gray-700 hover:bg-gray-100"
                         }`}
                       >
                         {lang.name}
@@ -97,7 +112,9 @@ export function Navbar() {
         transition={{ delay: 0.1 }}
         className={cn(
           "fixed left-0 right-0 z-50 transition-all duration-500",
-          isScrolled ? "top-0 py-3 bg-secondary/95" : "top-10 py-4 bg-transparent",
+          isScrolled
+            ? "top-0 py-3 bg-secondary/95"
+            : "top-10 py-4 bg-transparent",
         )}
       >
         {/* Subtle Moroccan Pattern */}
@@ -107,19 +124,45 @@ export function Navbar() {
             viewBox="0 0 100 100"
             preserveAspectRatio="none"
           >
-            <pattern id="navPattern" patternUnits="userSpaceOnUse" width="20" height="20" patternTransform="rotate(45)">
-              <path d="M10,0 L10,20 M0,10 L20,10" stroke="currentColor" strokeWidth="0.5" />
+            <pattern
+              id="navPattern"
+              patternUnits="userSpaceOnUse"
+              width="20"
+              height="20"
+              patternTransform="rotate(45)"
+            >
+              <path
+                d="M10,0 L10,20 M0,10 L20,10"
+                stroke="currentColor"
+                strokeWidth="0.5"
+              />
             </pattern>
-            <rect x="0" y="0" width="100%" height="100%" fill="url(#navPattern)" />
+            <rect
+              x="0"
+              y="0"
+              width="100%"
+              height="100%"
+              fill="url(#navPattern)"
+            />
           </svg>
         </div>
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="relative group">
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="flex items-center">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="flex items-center"
+              >
                 <div className="relative w-32 h-12 md:w-40 md:h-14">
-                  <Image src="/go-rent-logo.png" alt="GO RENT Car Logo" fill className="object-contain" priority />
+                  <Image
+                    src="/go-rent-logo.png"
+                    alt="GO RENT Car Logo"
+                    fill
+                    className="object-contain"
+                    priority
+                  />
                 </div>
               </motion.div>
             </Link>
@@ -202,7 +245,11 @@ export function Navbar() {
                 rel="noopener noreferrer"
                 className="text-white hover:text-primary transition-colors"
               >
-                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                <svg
+                  className="w-5 h-5"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
                   <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
                 </svg>
                 <span className="sr-only">TikTok</span>
@@ -216,7 +263,11 @@ export function Navbar() {
                 <MessageCircle className="w-5 h-5" />
                 <span className="sr-only">WhatsApp</span>
               </a>
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="ml-2">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="ml-2"
+              >
                 <Link href="/cars">
                   <Button className="bg-primary hover:bg-primary/90 text-white shadow-lg hover:shadow-xl transition-all duration-300 relative z-0">
                     {t("nav.bookNow")}
@@ -231,7 +282,11 @@ export function Navbar() {
               onClick={() => setIsOpen(!isOpen)}
               className="lg:hidden p-2 rounded-lg transition-colors text-white hover:bg-white/10 ml-2"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </motion.button>
           </div>
         </div>
@@ -305,7 +360,11 @@ export function Navbar() {
                       rel="noopener noreferrer"
                       className="text-gray-700 hover:text-primary transition-colors"
                     >
-                      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                      <svg
+                        className="w-5 h-5"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                      >
                         <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
                       </svg>
                       <span className="sr-only">TikTok</span>
@@ -321,19 +380,23 @@ export function Navbar() {
                     </a>
                   </div>
                   <Link href="/cars">
-                    <Button className="w-full bg-primary hover:bg-primary/90 text-white">{t("nav.bookNow")}</Button>
+                    <Button className="w-full bg-primary hover:bg-primary/90 text-white">
+                      {t("nav.bookNow")}
+                    </Button>
                   </Link>
                 </div>
 
                 <div className="pt-4 border-t">
-                  <p className="text-sm text-gray-500 mb-2">{t("nav.selectLanguage")}</p>
+                  <p className="text-sm text-gray-500 mb-2">
+                    {t("nav.selectLanguage")}
+                  </p>
                   <div className="flex gap-2 justify-center">
                     {languages.map((lang) => (
                       <button
                         key={lang.code}
                         onClick={() => {
-                          setLanguage(lang.code)
-                          setIsOpen(false)
+                          setLanguage(lang.code);
+                          setIsOpen(false);
                         }}
                         className={`px-4 py-2 text-sm rounded-md flex-1 ${
                           language === lang.code
@@ -352,5 +415,5 @@ export function Navbar() {
         </AnimatePresence>
       </motion.header>
     </>
-  )
+  );
 }

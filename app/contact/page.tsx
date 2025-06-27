@@ -113,7 +113,7 @@ export default function ContactPage() {
     {
       icon: Mail,
       title: t("contactPage.contactInfo.email.title"),
-      details: ["info@gorentcarmarrakech.com", "support@gorentcarmarrakech.com"],
+      details: ["Réservation@gorentcarmarrakech.com", "support@gorentcarmarrakech.com"],
       color: "bg-primary",
     },
     {

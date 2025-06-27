@@ -26,7 +26,8 @@ export const fr = {
   },
   hero: {
     title: "Go Rent - Location de Voitures à Marrakech",
-    subtitle: "Découvrez la magie du Maroc avec notre service de location de voitures premium",
+    subtitle:
+      "Découvrez la magie du Maroc avec notre service de location de voitures premium",
   },
   bookingForm: {
     pickupLocation: "Lieu de prise en charge",
@@ -60,7 +61,8 @@ export const fr = {
   fleet: {
     badge: "Notre Flotte",
     title: "Location de Voitures à Marrakech",
-    subtitle: "Choisissez parmi notre large sélection de véhicules pour votre séjour à Marrakech",
+    subtitle:
+      "Choisissez parmi notre large sélection de véhicules pour votre séjour à Marrakech",
     viewAll: "Voir Tous les Véhicules",
     popular: "Populaire",
     economy: "Économique",
@@ -121,7 +123,8 @@ export const fr = {
     },
     cta: {
       title: "Besoin d'Aide pour Choisir?",
-      description: "Nos experts sont là pour vous aider à trouver la voiture parfaite pour votre aventure marocaine.",
+      description:
+        "Nos experts sont là pour vous aider à trouver la voiture parfaite pour votre aventure marocaine.",
       callUs: "Appelez-nous",
       contactUs: "Nous Contacter",
     },
@@ -129,7 +132,8 @@ export const fr = {
   whoWeArePage: {
     hero: {
       title: "Qui Nous Sommes",
-      subtitle: "Votre partenaire de confiance pour la location de voitures à Marrakech et dans tout le Maroc",
+      subtitle:
+        "Votre partenaire de confiance pour la location de voitures à Marrakech et dans tout le Maroc",
     },
     about: {
       badge: "À Propos de Go Rent",
@@ -141,7 +145,7 @@ export const fr = {
       mission: {
         title: "Notre Mission",
         description:
-          "Fournir des services de location de voitures exceptionnels qui dépassent les attentes des clients grâce à la fiabilité, la commodité et l'attention personnalisée.",
+          "Fournir des services de location de voitures exceptionnels qui dépassent les attentes des clients grâce à la fiabilité, la commodité et l'attention personnalis��e.",
       },
     },
     features: {
@@ -220,7 +224,8 @@ export const fr = {
     },
     cta: {
       title: "Prêt à découvrir la différence Go Rent?",
-      subtitle: "Rejoignez des milliers de clients satisfaits qui nous ont choisis pour leurs aventures marocaines.",
+      subtitle:
+        "Rejoignez des milliers de clients satisfaits qui nous ont choisis pour leurs aventures marocaines.",
       contactUs: "Nous Contacter",
       bookCar: "Réserver une Voiture",
     },
@@ -228,7 +233,8 @@ export const fr = {
   contactPage: {
     hero: {
       title: "Nous Contacter",
-      subtitle: "Nous sommes là pour vous aider avec tous vos besoins de location de voitures à Marrakech",
+      subtitle:
+        "Nous sommes là pour vous aider avec tous vos besoins de location de voitures à Marrakech",
     },
     getInTouch: {
       badge: "Entrer en Contact",
@@ -247,11 +253,17 @@ export const fr = {
       },
       email: {
         title: "Adresse Email",
-        details: ["info@gorentcarmarrakech.com", "support@gorentcarmarrakech.com"],
+        details: [
+          "info@gorentcarmarrakech.com",
+          "support@gorentcarmarrakech.com",
+        ],
       },
       hours: {
         title: "Heures d'Ouverture",
-        details: ["Lundi - Vendredi: 8h00 - 20h00", "Samedi - Dimanche: 9h00 - 18h00"],
+        details: [
+          "Lundi - Vendredi: 8h00 - 20h00",
+          "Samedi - Dimanche: 9h00 - 18h00",
+        ],
       },
     },
     map: {
@@ -280,13 +292,15 @@ export const fr = {
       },
       success: {
         title: "Merci!",
-        message: "Votre message a été envoyé avec succès. Nous vous répondrons sous peu.",
+        message:
+          "Votre message a été envoyé avec succès. Nous vous répondrons sous peu.",
       },
     },
     faq: {
       badge: "FAQ",
       title: "Questions Fréquemment Posées",
-      subtitle: "Trouvez des réponses aux questions courantes sur notre processus de contact et de réservation.",
+      subtitle:
+        "Trouvez des réponses aux questions courantes sur notre processus de contact et de réservation.",
       items: {
         howToBook: {
           question: "Comment puis-je faire une réservation?",
@@ -299,7 +313,8 @@ export const fr = {
             "Vous aurez besoin d'un permis de conduire valide (détenu depuis au moins un an), d'un passeport ou d'une carte d'identité, et d'une carte de crédit pour la caution. Les visiteurs internationaux doivent avoir un permis de conduire international avec leur permis national.",
         },
         delivery: {
-          question: "Proposez-vous la prise en charge à l'aéroport et la livraison?",
+          question:
+            "Proposez-vous la prise en charge à l'aéroport et la livraison?",
           answer:
             "Oui, nous offrons la livraison et la prise en charge gratuites à l'aéroport Marrakech Ménara et aux hôtels du centre-ville de Marrakech. Notre représentant vous rencontrera avec une pancarte portant votre nom et vous aidera avec vos bagages.",
         },
@@ -312,7 +327,8 @@ export const fr = {
     },
     quickContact: {
       title: "Options de Contact Rapide",
-      subtitle: "Choisissez la façon la plus pratique d'entrer en contact avec notre équipe.",
+      subtitle:
+        "Choisissez la façon la plus pratique d'entrer en contact avec notre équipe.",
       options: {
         call: {
           title: "Appelez-nous",
@@ -321,7 +337,8 @@ export const fr = {
         },
         book: {
           title: "Réserver en Ligne",
-          description: "Réservez votre véhicule via notre système de réservation en ligne",
+          description:
+            "Réservez votre véhicule via notre système de réservation en ligne",
           action: "Réserver Maintenant",
         },
         visit: {
@@ -335,23 +352,28 @@ export const fr = {
   whyChooseUs: {
     badge: "Nos Avantages",
     title: "Pourquoi Choisir Go Rent Car Pour Votre Location à Marrakech?",
-    subtitle: "Découvrez les avantages qui font de nous le choix idéal pour votre location de voiture à Marrakech",
+    subtitle:
+      "Découvrez les avantages qui font de nous le choix idéal pour votre location de voiture à Marrakech",
     features: {
       price: {
         title: "Prix Compétitifs",
-        description: "Nous offrons les tarifs les plus compétitifs à Marrakech sans frais cachés",
+        description:
+          "Nous offrons les tarifs les plus compétitifs à Marrakech sans frais cachés",
       },
       fleet: {
         title: "Véhicules Récents",
-        description: "Notre flotte se compose de véhicules récents et bien entretenus pour votre sécurité et confort",
+        description:
+          "Notre flotte se compose de véhicules récents et bien entretenus pour votre sécurité et confort",
       },
       service: {
         title: "Service Personnalisé",
-        description: "Service sur mesure pour répondre à tous vos besoins pendant votre séjour",
+        description:
+          "Service sur mesure pour répondre à tous vos besoins pendant votre séjour",
       },
       support: {
         title: "Assistance 24/7",
-        description: "Notre équipe est disponible 24h/24 et 7j/7 pour vous assister en cas de besoin",
+        description:
+          "Notre équipe est disponible 24h/24 et 7j/7 pour vous assister en cas de besoin",
       },
     },
     onlineBooking: {
@@ -364,7 +386,8 @@ export const fr = {
   destinations: {
     badge: "Destinations",
     title: "Explorez Marrakech et ses Environs",
-    subtitle: "Découvrez les plus belles destinations du Maroc avec nos voitures de location",
+    subtitle:
+      "Découvrez les plus belles destinations du Maroc avec nos voitures de location",
     viewAll: "Découvrir Toutes les Destinations",
     items: {
       medina: "Médina de Marrakech",
@@ -382,12 +405,14 @@ export const fr = {
   testimonials: {
     badge: "Témoignages",
     title: "Ce Que Disent Nos Clients",
-    subtitle: "Découvrez les avis de nos clients satisfaits qui ont exploré le Maroc avec nos voitures",
+    subtitle:
+      "Découvrez les avis de nos clients satisfaits qui ont exploré le Maroc avec nos voitures",
   },
   blog: {
     badge: "Blog",
     title: "Restez Informé avec les Dernières Actualités",
-    subtitle: "Découvrez des conseils de voyage, des guides et de l'inspiration pour votre aventure marocaine",
+    subtitle:
+      "Découvrez des conseils de voyage, des guides et de l'inspiration pour votre aventure marocaine",
     readMore: "Lire Plus d'Articles",
     items: {
       // For homepage previews or simpler listings
@@ -399,7 +424,8 @@ export const fr = {
       },
       roadTrip: {
         title: "Guide Road Trip: Marrakech vers Essaouira",
-        excerpt: "Planifiez le road trip côtier parfait de Marrakech vers la charmante ville balnéaire d'Essaouira.",
+        excerpt:
+          "Planifiez le road trip côtier parfait de Marrakech vers la charmante ville balnéaire d'Essaouira.",
         date: "22 avril 2023",
       },
       drivingTips: {
@@ -470,7 +496,13 @@ export const fr = {
       <p>Essaouira jouit d'un climat doux toute l'année grâce à l'influence modératrice de l'océan Atlantique. Cependant, le printemps (mars-mai) et l'automne (septembre-novembre) offrent le temps le plus agréable pour conduire et explorer. L'été peut être venteux, ce qui est parfait pour les amateurs de sports nautiques.</p>
       <p>Ce road trip côtier offre le mélange parfait d'aventure et de détente, en faisant l'un des trajets incontournables du Maroc. Que vous recherchiez une immersion culturelle, la beauté naturelle, ou simplement un changement de rythme par rapport à l'intensité de Marrakech, le voyage vers Essaouira offre des expériences inoubliables.</p>
     `,
-        tags: ["Road Trip", "Essaouira", "Route Côtière", "Côte Atlantique", "Excursion d'une Journée"],
+        tags: [
+          "Road Trip",
+          "Essaouira",
+          "Route Côtière",
+          "Côte Atlantique",
+          "Excursion d'une Journée",
+        ],
       },
       "professional-reliable-car-rental": {
         title: "Location de voitures professionnelle et fiable à Marrakech",
@@ -518,7 +550,13 @@ export const fr = {
       <p>Notre équipe se compose de professionnels expérimentés qui connaissent Marrakech et le Maroc intimement. Nous ne sommes pas seulement une compagnie de location de voitures – nous sommes vos partenaires locaux pour créer une expérience marocaine inoubliable.</p>
       <p>Découvrez la différence avec Go Rent, où le professionnalisme rencontre la fiabilité dans les services de location de voitures. Réservez en toute confiance en sachant que votre aventure marocaine commence avec la meilleure solution de transport possible.</p>
     `,
-        tags: ["Service Professionnel", "Fiable", "Location de Voitures", "Marrakech", "Service Client"],
+        tags: [
+          "Service Professionnel",
+          "Fiable",
+          "Location de Voitures",
+          "Marrakech",
+          "Service Client",
+        ],
       },
       "automatic-car-rental": {
         title: "Location de voiture automatique à Marrakech",
@@ -549,7 +587,8 @@ export const fr = {
         readTime: "5 min de lecture",
       },
       "scenic-routes-marrakech": {
-        title: "5 Itinéraires Panoramiques Autour de Marrakech pour des Excursions d'une Journée",
+        title:
+          "5 Itinéraires Panoramiques Autour de Marrakech pour des Excursions d'une Journée",
         excerpt:
           "Découvrez les plus belles routes panoramiques autour de Marrakech, parfaites pour des excursions d'une journée avec votre voiture de location.",
         author: "Mohammed Alami",
@@ -649,32 +688,38 @@ export const fr = {
     },
     items: {
       howToBook: {
-        question: "Comment puis-je réserver une location de voiture à Marrakech?",
+        question:
+          "Comment puis-je réserver une location de voiture à Marrakech?",
         answer:
           "Vous pouvez facilement réserver une voiture en ligne via notre formulaire de réservation sur ce site web, nous appeler directement au +212 612 345 678, ou nous envoyer un email. Notre processus de réservation est simple et sécurisé. Nous confirmerons votre réservation dans les 24 heures et vous enverrons tous les détails nécessaires.",
       },
       documents: {
-        question: "Quels documents ai-je besoin pour louer une voiture au Maroc?",
+        question:
+          "Quels documents ai-je besoin pour louer une voiture au Maroc?",
         answer:
           "Pour louer un véhicule au Maroc, vous avez besoin de: (1) Un permis de conduire valide détenu depuis au moins un an, (2) Un passeport ou une carte d'identité nationale, (3) Une carte de crédit au nom du conducteur pour la caution. Les visiteurs internationaux peuvent avoir besoin d'un Permis de Conduire International selon leur pays d'origine.",
       },
       deposit: {
-        question: "Quel est le montant de la caution pour la location de voiture?",
+        question:
+          "Quel est le montant de la caution pour la location de voiture?",
         answer:
           "Une caution est requise pour toutes les locations. Le montant varie selon le type de véhicule: Voitures économiques (2000-3000 MAD), SUV (4000-6000 MAD), Véhicules de luxe (8000-15000 MAD). La caution est bloquée sur votre carte de crédit et libérée dans les 7-14 jours après le retour du véhicule en bon état.",
       },
       modify: {
-        question: "Puis-je modifier ou annuler ma réservation de location de voiture?",
+        question:
+          "Puis-je modifier ou annuler ma réservation de location de voiture?",
         answer:
           "Oui, vous pouvez modifier ou annuler votre réservation jusqu'à 48 heures avant la prise en charge sans frais. Pour les changements dans les 48 heures, des frais de modification peuvent s'appliquer. Les annulations dans les 24 heures peuvent entraîner des frais d'annulation. Contactez-nous par téléphone ou email pour effectuer des changements.",
       },
       delivery: {
-        question: "Proposez-vous la livraison de voiture à l'aéroport de Marrakech ou aux hôtels?",
+        question:
+          "Proposez-vous la livraison de voiture à l'aéroport de Marrakech ou aux hôtels?",
         answer:
           "Oui, nous proposons des services de livraison et de récupération gratuits à l'aéroport Marrakech Ménara et dans la plupart des hôtels du centre-ville et du quartier Guéliz. Pour les emplacements en dehors du centre-ville, des frais de livraison peuvent s'appliquer. Nous pouvons également organiser des services d'accueil à l'aéroport.",
       },
       travel: {
-        question: "Puis-je conduire la voiture de location en dehors de Marrakech?",
+        question:
+          "Puis-je conduire la voiture de location en dehors de Marrakech?",
         answer:
           "Absolument! Vous pouvez voyager partout au Maroc avec nos véhicules de location. Les destinations populaires incluent Essaouira, Casablanca, Fès, les montagnes de l'Atlas, et même le désert du Sahara. Nous demandons simplement que vous nous informiez de vos plans de voyage pour des raisons d'assurance et de sécurité.",
       },
@@ -693,15 +738,17 @@ export const fr = {
       q_deposit: {
         question: "Une caution est-elle requise ?",
         answer:
-          "Oui, une caution est requise pour toutes les locations. Le montant varie selon la catégorie du véhicule (généralement entre 5000 et 10000 MAD) et sera intégralement remboursé au retour du véhicule dans le même état qu'à la location.",
+          "Oui, une caution est requise pour toutes les locations. Le montant varie selon la catégorie du véhicule (généralement entre 5000 et 10000 MAD) et sera intégralement remboursé au retour du v��hicule dans le même état qu'à la location.",
       },
       q_delivery: {
-        question: "Proposez-vous la prise en charge et la livraison à l'aéroport ?",
+        question:
+          "Proposez-vous la prise en charge et la livraison à l'aéroport ?",
         answer:
           "Oui, nous offrons la livraison et la prise en charge gratuites à l'aéroport de Marrakech Menara et aux hôtels du centre-ville de Marrakech. Notre représentant vous accueillera avec une pancarte à votre nom et vous aidera avec vos bagages.",
       },
       q_travelMorocco: {
-        question: "Puis-je voyager partout au Maroc avec vos voitures de location ?",
+        question:
+          "Puis-je voyager partout au Maroc avec vos voitures de location ?",
         answer:
           "Oui, vous pouvez voyager partout au Maroc avec nos véhicules. Nous vous demandons simplement de nous informer de votre itinéraire pour des raisons de sécurité. Nos véhicules sont bien entretenus et adaptés à la conduite en ville comme aux longs trajets.",
       },
@@ -750,13 +797,15 @@ export const fr = {
   },
   cta: {
     title: "Prêt à Explorer Marrakech?",
-    subtitle: "Réservez votre voiture maintenant et commencez votre aventure marocaine avec confort et style",
+    subtitle:
+      "Réservez votre voiture maintenant et commencez votre aventure marocaine avec confort et style",
     button: "Réserver Maintenant",
   },
   newsletter: {
     badge: "Newsletter",
     title: "Abonnez-vous à Notre Newsletter",
-    subtitle: "Recevez les dernières offres, conseils de voyage et offres exclusives directement dans votre boîte mail",
+    subtitle:
+      "Recevez les dernières offres, conseils de voyage et offres exclusives directement dans votre boîte mail",
     placeholder: "Entrez votre email",
     button: "S'abonner",
     subscribing: "Abonnement en cours...",
@@ -793,7 +842,7 @@ export const fr = {
       title: "Nous Contacter",
       address: "123 Rue de Marrakech, Guéliz, Marrakech, Maroc",
       phone: "+212 612 345 678",
-      email: "info@gorentcarmarrakech.com",
+      email: "Reservation@gorentmarrakech.com",
       newsletter: "S'abonner à la Newsletter",
       emailPlaceholder: "Votre email",
     },
@@ -805,4 +854,4 @@ export const fr = {
     },
     copyright: "Tous droits réservés.",
   },
-}
+};

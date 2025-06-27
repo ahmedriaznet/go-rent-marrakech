@@ -26,7 +26,8 @@ export const en = {
   },
   hero: {
     title: "Go Rent - Car Rentals in Marrakech",
-    subtitle: "Discover the magic of Morocco with our premium car rental service",
+    subtitle:
+      "Discover the magic of Morocco with our premium car rental service",
   },
   bookingForm: {
     pickupLocation: "Pickup Location",
@@ -60,7 +61,8 @@ export const en = {
   fleet: {
     badge: "Our Fleet",
     title: "Car Rentals in Marrakech",
-    subtitle: "Choose from our wide selection of vehicles for your stay in Marrakech",
+    subtitle:
+      "Choose from our wide selection of vehicles for your stay in Marrakech",
     viewAll: "View All Vehicles",
     popular: "Popular",
     economy: "Economy",
@@ -73,7 +75,8 @@ export const en = {
   fleetPage: {
     hero: {
       title: "Explore Our Premium Fleet",
-      subtitle: "Find the perfect vehicle for your Moroccan adventure. Quality cars, unbeatable prices.",
+      subtitle:
+        "Find the perfect vehicle for your Moroccan adventure. Quality cars, unbeatable prices.",
       searchPlaceholder: "Search by car name or brand...",
     },
     filters: {
@@ -114,12 +117,14 @@ export const en = {
     },
     noResults: {
       title: "No Cars Found",
-      description: "We couldn't find any cars matching your current filters. Try adjusting your search.",
+      description:
+        "We couldn't find any cars matching your current filters. Try adjusting your search.",
       clearFilters: "Clear All Filters",
     },
     cta: {
       title: "Can't Find What You're Looking For?",
-      description: "Our team is ready to help you find the perfect car. Contact us for personalized assistance.",
+      description:
+        "Our team is ready to help you find the perfect car. Contact us for personalized assistance.",
       callUs: "Call Us Now",
       contactUs: "Contact Us",
     },
@@ -128,7 +133,8 @@ export const en = {
   whoWeArePage: {
     hero: {
       title: "Who We Are",
-      subtitle: "Your trusted partner for car rentals in Marrakech and across Morocco",
+      subtitle:
+        "Your trusted partner for car rentals in Marrakech and across Morocco",
     },
     about: {
       badge: "About Go Rent",
@@ -166,7 +172,8 @@ export const en = {
         },
         easyBooking: {
           title: "Easy and Quick Online Booking",
-          description: "Reserve your vehicle in minutes with our user-friendly online booking system.",
+          description:
+            "Reserve your vehicle in minutes with our user-friendly online booking system.",
         },
       },
     },
@@ -178,7 +185,8 @@ export const en = {
       steps: {
         chooseDestination: {
           title: "Choose Your Destination",
-          description: "Select where you want to pick up your vehicle from our various locations across Morocco.",
+          description:
+            "Select where you want to pick up your vehicle from our various locations across Morocco.",
         },
         selectLocation: {
           title: "Select Your Pickup Point",
@@ -217,7 +225,8 @@ export const en = {
     },
     cta: {
       title: "Ready to Experience the Go Rent Difference?",
-      subtitle: "Join thousands of satisfied customers who have chosen us for their Moroccan adventures.",
+      subtitle:
+        "Join thousands of satisfied customers who have chosen us for their Moroccan adventures.",
       contactUs: "Contact Us",
       bookCar: "Book a Car",
     },
@@ -227,7 +236,8 @@ export const en = {
   contactPage: {
     hero: {
       title: "Contact Us",
-      subtitle: "We're here to assist you with all your car rental needs in Marrakech",
+      subtitle:
+        "We're here to assist you with all your car rental needs in Marrakech",
     },
     getInTouch: {
       badge: "Get In Touch",
@@ -279,7 +289,8 @@ export const en = {
       },
       success: {
         title: "Thank You!", // Used in toast
-        message: "Your message has been sent successfully. We will get back to you shortly.", // Used in toast
+        message:
+          "Your message has been sent successfully. We will get back to you shortly.", // Used in toast
       },
       error: {
         // Added for toast error messages
@@ -290,7 +301,8 @@ export const en = {
     faq: {
       badge: "FAQ",
       title: "Frequently Asked Questions",
-      subtitle: "Find answers to common questions about our contact and booking process.",
+      subtitle:
+        "Find answers to common questions about our contact and booking process.",
       items: {
         howToBook: {
           question: "How can I make a reservation?",
@@ -340,15 +352,18 @@ export const en = {
   whyChooseUs: {
     badge: "Our Advantages",
     title: "Why Choose Go Rent Car For Your Rental in Marrakech?",
-    subtitle: "Discover the advantages that make us the ideal choice for your car rental in Marrakech",
+    subtitle:
+      "Discover the advantages that make us the ideal choice for your car rental in Marrakech",
     features: {
       price: {
         title: "Competitive Prices",
-        description: "We offer the most competitive rates in Marrakech with no hidden fees",
+        description:
+          "We offer the most competitive rates in Marrakech with no hidden fees",
       },
       fleet: {
         title: "Recent Vehicles",
-        description: "Our fleet consists of recent and well-maintained vehicles for your safety and comfort",
+        description:
+          "Our fleet consists of recent and well-maintained vehicles for your safety and comfort",
       },
       service: {
         title: "Personalized Service",
@@ -356,7 +371,8 @@ export const en = {
       },
       support: {
         title: "24/7 Assistance",
-        description: "Our team is available 24/7 to assist you whenever you need",
+        description:
+          "Our team is available 24/7 to assist you whenever you need",
       },
     },
     onlineBooking: {
@@ -369,7 +385,8 @@ export const en = {
   destinations: {
     badge: "Destinations",
     title: "Explore Marrakech and its Surroundings",
-    subtitle: "Discover the most beautiful destinations in Morocco with our rental cars",
+    subtitle:
+      "Discover the most beautiful destinations in Morocco with our rental cars",
     viewAll: "Discover All Destinations",
     items: {
       medina: "Marrakech Medina",
@@ -387,12 +404,14 @@ export const en = {
   testimonials: {
     badge: "Testimonials",
     title: "What Our Clients Say",
-    subtitle: "Discover the reviews from our satisfied customers who explored Morocco with our cars",
+    subtitle:
+      "Discover the reviews from our satisfied customers who explored Morocco with our cars",
   },
   blog: {
     badge: "Blog",
     title: "Stay Informed with the Latest News",
-    subtitle: "Discover travel tips, guides, and inspiration for your Moroccan adventure",
+    subtitle:
+      "Discover travel tips, guides, and inspiration for your Moroccan adventure",
     readMore: "Read More Articles",
     items: {
       "cheap-car-rental": {
@@ -413,17 +432,20 @@ export const en = {
       },
       top10: {
         title: "Top 10 Places to Visit in Marrakech",
-        excerpt: "Discover the most beautiful and historic sites in the Red City not to be missed on your visit.",
+        excerpt:
+          "Discover the most beautiful and historic sites in the Red City not to be missed on your visit.",
         date: "May 15, 2023",
       },
       roadTrip: {
         title: "Road Trip Guide: Marrakech to Essaouira",
-        excerpt: "Plan the perfect coastal road trip from Marrakech to the charming seaside town of Essaouira.",
+        excerpt:
+          "Plan the perfect coastal road trip from Marrakech to the charming seaside town of Essaouira.",
         date: "April 22, 2023",
       },
       drivingTips: {
         title: "Driving in Morocco: Tips and Advice",
-        excerpt: "Everything you need to know about driving in Morocco, from road conditions to local customs.",
+        excerpt:
+          "Everything you need to know about driving in Morocco, from road conditions to local customs.",
         date: "March 10, 2023",
       },
     },
@@ -471,7 +493,13 @@ export const en = {
           <p>Essaouira enjoys a mild climate year-round due to the moderating influence of the Atlantic Ocean. However, spring (March-May) and autumn (September-November) offer the most pleasant weather for driving and exploring. Summer can be windy, which is perfect for water sports enthusiasts.</p>
           <p>This coastal road trip offers the perfect blend of adventure and relaxation, making it one of Morocco's must-do journeys. Whether you're seeking cultural immersion, natural beauty, or simply a change of pace from the intensity of Marrakech, the drive to Essaouira delivers unforgettable experiences.</p>
         `,
-        tags: ["Road Trip", "Essaouira", "Coastal Drive", "Atlantic Coast", "Day Trip"],
+        tags: [
+          "Road Trip",
+          "Essaouira",
+          "Coastal Drive",
+          "Atlantic Coast",
+          "Day Trip",
+        ],
       },
       "professional-reliable-car-rental": {
         title: "Professional and Reliable Car Rental in Marrakech",
@@ -519,11 +547,18 @@ export const en = {
           <p>Our team consists of experienced professionals who know Marrakech and Morocco intimately. We're not just a car rental company – we're your local partners in creating an unforgettable Moroccan experience.</p>
           <p>Experience the Go Rent difference, where professionalism meets reliability in car rental services. Book with confidence knowing your Moroccan adventure starts with the best possible transportation solution.</p>
         `,
-        tags: ["Professional Service", "Reliable", "Car Rental", "Marrakech", "Customer Service"],
+        tags: [
+          "Professional Service",
+          "Reliable",
+          "Car Rental",
+          "Marrakech",
+          "Customer Service",
+        ],
       },
       "automatic-car-rental": {
         title: "Automatic Car Rental in Marrakech",
-        excerpt: "Prefer simplicity and driving comfort? Choose an automatic car rental in Marrakech with Go Rent.",
+        excerpt:
+          "Prefer simplicity and driving comfort? Choose an automatic car rental in Marrakech with Go Rent.",
         author: "Sarah Johnson",
         readTime: "3 min read",
       },
@@ -629,7 +664,8 @@ export const en = {
       backToTop: "Back to Top",
       newsletter: {
         title: "Subscribe to Our Blog",
-        description: "Get the latest travel tips, road trip ideas, and exclusive offers delivered to your inbox.",
+        description:
+          "Get the latest travel tips, road trip ideas, and exclusive offers delivered to your inbox.",
         placeholder: "Your email address",
         subscribe: "Subscribe",
       },
@@ -638,11 +674,13 @@ export const en = {
   faq: {
     badge: "FAQ",
     title: "Frequently Asked Questions",
-    subtitle: "Find answers to the most frequently asked questions about our car rental service in Marrakech",
+    subtitle:
+      "Find answers to the most frequently asked questions about our car rental service in Marrakech",
     contactSupport: "Contact Support",
     needMoreHelp: {
       title: "Need More Help?",
-      description: "Can't find the answer you're looking for? Please contact our customer support team.",
+      description:
+        "Can't find the answer you're looking for? Please contact our customer support team.",
     },
     items: {
       howToBook: {
@@ -747,13 +785,15 @@ export const en = {
   },
   cta: {
     title: "Ready to Explore Marrakech?",
-    subtitle: "Book your car now and start your Moroccan adventure with comfort and style",
+    subtitle:
+      "Book your car now and start your Moroccan adventure with comfort and style",
     button: "Book Now",
   },
   newsletter: {
     badge: "Newsletter",
     title: "Subscribe to Our Newsletter",
-    subtitle: "Get the latest deals, travel tips, and exclusive offers directly in your inbox",
+    subtitle:
+      "Get the latest deals, travel tips, and exclusive offers directly in your inbox",
     placeholder: "Enter your email",
     button: "Subscribe",
     subscribing: "Subscribing...",
@@ -790,7 +830,7 @@ export const en = {
       title: "Contact Us",
       address: "123 Marrakech Street, Gueliz, Marrakech, Morocco",
       phone: "+212 612 345 678",
-      email: "info@gorentcarmarrakech.com",
+      email: "Reservation@gorentmarrakech.com",
       newsletter: "Subscribe to Newsletter",
       emailPlaceholder: "Your email",
     },
@@ -802,4 +842,4 @@ export const en = {
     },
     copyright: "All rights reserved.",
   },
-}
+};
