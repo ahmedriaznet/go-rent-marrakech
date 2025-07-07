@@ -718,7 +718,7 @@ export default function Home() {
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
                 {language === "en"
-                  ? "Explore Morocco in comfort and style with our premium fleet of rental cars."
+                  ? "Explore Morocco in comfort and style with our premium fleet of rental cars"
                   : "Explorez le Maroc avec confort et style grâce à notre flotte premium de voitures de location"}
               </motion.p>
             </motion.div>
